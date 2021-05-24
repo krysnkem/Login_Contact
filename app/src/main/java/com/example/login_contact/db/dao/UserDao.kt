@@ -21,5 +21,5 @@ interface UserDao {
     fun updateUser(userEntity: UserEntity)
 
     @Query("SELECT * FROM user  where email=:useremail and password= :passWord")
-    fun login(useremail:String, passWord:String): UserEntity
+    fun login(useremail:String, passWord:String): UserEntity?
 }

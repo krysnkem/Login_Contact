@@ -11,6 +11,8 @@
         android:theme="@style/Theme.Login_Contact">
         <activity android:name=".ContactActivity"></activity>
         <activity android:name=".SignInAcitvity" />
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".CategoryContactsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

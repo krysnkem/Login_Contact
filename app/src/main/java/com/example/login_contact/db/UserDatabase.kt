@@ -4,17 +4,20 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.login_contact.db.dao.CategoryDao
 import com.example.login_contact.db.dao.UserDao
+import com.example.login_contact.db.entities.CategoryEntiity
 import com.example.login_contact.db.entities.UserEntity
 
 
 @Database(
-    entities = [UserEntity::class],
+    entities = [UserEntity::class, CategoryEntiity::class],
     version = 1
 )
 abstract class UserDatabase: RoomDatabase() {
 
     abstract fun userDao(): UserDao
+    abstract fun categoryDao(): CategoryDao
     companion object{
         @Volatile private var INSTANCE: UserDatabase? = null
         private  val LOCK = Any()
